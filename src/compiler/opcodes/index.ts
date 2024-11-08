@@ -31,6 +31,11 @@ import neg from "./neg";
 import jo from "./jo";
 import jno from "./jno";
 
+import shr from "./shr";
+import shl from "./shl";
+import retn from "./retn";
+import stosb from "./stosb";
+
 
 export const jumps = {
 
@@ -67,6 +72,11 @@ export const opcodes = {
     jo,
     jno,
     neg,
+
+    shr,
+    shl,
+    retn,
+    stosb
 }
 
 export const opcodes_0_operands = []

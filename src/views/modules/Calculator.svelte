@@ -41,6 +41,9 @@ $: {
             <input type="radio" class="btn-check" id="calc-16-bit-radio" autocomplete="off" value={16} bind:group={bits}>
             <label class="btn btn-outline-success" for="calc-16-bit-radio">16-bit</label>
 
+            <input type="radio" class="btn-check" id="calc-20-bit-radio" autocomplete="off" value={20} bind:group={bits}>
+            <label class="btn btn-outline-success" for="calc-20-bit-radio">20-bit</label>
+
             <input type="radio" class="btn-check" id="calc-32-bit-radio" autocomplete="off" value={32} bind:group={bits}>
             <label class="btn btn-outline-success" for="calc-32-bit-radio">32-bit</label>
         </div>

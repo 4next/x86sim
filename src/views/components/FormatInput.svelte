@@ -7,10 +7,12 @@
     export let value = 0        // signed integer value
     let focused = false         // is element currently focused?
     export let isDifferent = false
+    export let zeropad = 0;
 
     // if register value was changes from "outside" or it was changed using "validate() - transform it to internal "stringValue"
     function updateStringValue() {
         stringValue = intToFormattedString(value, $settings.selectedFormat, parseInt(bits))
+        stringValue = stringValue.padStart(zeropad, '0')
     }
 
     // try to correct the format of input after losing focus
@@ -61,8 +63,11 @@
         width: 100px;
     }
 
+    
+
     input.bin {
         width: 160px;
+        padding: 20rem;
     }
 
     input.hex {

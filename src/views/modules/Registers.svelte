@@ -16,7 +16,7 @@
     }
 
     .regContainer > div {
-        padding: 1rem;
+        padding: 1rem; 
     }
 
     .counter {
@@ -27,23 +27,23 @@
 <b>{$_('views.modules.registers')}:</b>
 <div class="regContainer">
     <div>
-        <Register bind:value={$registers.ip} isDifferent={differentRegisters.includes('ip')} bits="16" label="ip" tooltip={$_('tooltips.registers.ip')} bcolor="var(--register-ip)"/>
-        <Register bind:value={$registers.ax} isDifferent={differentRegisters.includes('ax')} bits="16" label="ax" tooltip={$_('tooltips.registers.ax')} bcolor="DARKSLATEGRAY"/>
-        <Register bind:value={$registers.bx} isDifferent={differentRegisters.includes('bx')} bits="16" label="bx" tooltip={$_('tooltips.registers.bx')}/>
-        <Register bind:value={$registers.cx} isDifferent={differentRegisters.includes('cx')} bits="16" label="cx" tooltip={$_('tooltips.registers.cx')}/>
-        <Register bind:value={$registers.dx} isDifferent={differentRegisters.includes('dx')} bits="16" label="dx" tooltip={$_('tooltips.registers.dx')}/>
+        <Register bind:value={$registers.ip} isDifferent={differentRegisters.includes('ip')} zeropad=4 bits="16" label="IP" tooltip={$_('tooltips.registers.ip')} bcolor="var(--register-ip)"/>
+        <Register bind:value={$registers.ax} isDifferent={differentRegisters.includes('ax')} zeropad=4 bits="16" label="AX" tooltip={$_('tooltips.registers.ax')} bcolor="DARKSLATEGRAY"/>
+        <Register bind:value={$registers.bx} isDifferent={differentRegisters.includes('bx')} zeropad=4 bits="16" label="BX" tooltip={$_('tooltips.registers.bx')}/>
+        <Register bind:value={$registers.cx} isDifferent={differentRegisters.includes('cx')} zeropad=4 bits="16" label="CX" tooltip={$_('tooltips.registers.cx')}/>
+        <Register bind:value={$registers.dx} isDifferent={differentRegisters.includes('dx')} zeropad=4 bits="16" label="DX" tooltip={$_('tooltips.registers.dx')}/>
     </div>
     <div>
-        <Register bind:value={$registers.si} isDifferent={differentRegisters.includes('si')} bits="16" label="si" tooltip={$_('tooltips.registers.si')}/>
-        <Register bind:value={$registers.di} isDifferent={differentRegisters.includes('di')} bits="16" label="di" tooltip={$_('tooltips.registers.di')}/>
-        <Register bind:value={$registers.sp} isDifferent={differentRegisters.includes('sp')} bits="16" label="sp" tooltip={$_('tooltips.registers.sp')} bcolor="var(--register-sp)"/>
-        <Register bind:value={$registers.bp} isDifferent={differentRegisters.includes('bp')} bits="16" label="bp" tooltip={$_('tooltips.registers.bp')} bcolor="var(--register-bp)"/>
+        <Register bind:value={$registers.si} isDifferent={differentRegisters.includes('si')} zeropad=4 bits="16" label="si" tooltip={$_('tooltips.registers.si')}/>
+        <Register bind:value={$registers.di} isDifferent={differentRegisters.includes('di')} zeropad=4 bits="16" label="di" tooltip={$_('tooltips.registers.di')}/>
+        <Register bind:value={$registers.sp} isDifferent={differentRegisters.includes('sp')} zeropad=4 bits="16" label="sp" tooltip={$_('tooltips.registers.sp')} bcolor="var(--register-sp)"/>
+        <Register bind:value={$registers.bp} isDifferent={differentRegisters.includes('bp')} zeropad=4 bits="16" label="bp" tooltip={$_('tooltips.registers.bp')} bcolor="var(--register-bp)"/>
     </div>
     <div>
-        <Register bind:value={$registers.cs} isDifferent={differentRegisters.includes('cs')} bits="16" label="cs" tooltip={$_('tooltips.registers.cs')} bcolor="green"/>
-        <Register bind:value={$registers.ds} isDifferent={differentRegisters.includes('ds')} bits="16" label="ds" tooltip={$_('tooltips.registers.ds')} bcolor="green"/>
-        <Register bind:value={$registers.ss} isDifferent={differentRegisters.includes('ss')} bits="16" label="ss" tooltip={$_('tooltips.registers.ss')} bcolor="green"/>
-        <Register bind:value={$registers.es} isDifferent={differentRegisters.includes('es')} bits="16" label="es" tooltip={$_('tooltips.registers.es')} bcolor="green"/>
+        <Register bind:value={$registers.cs} isDifferent={differentRegisters.includes('cs')} zeropad=4 bits="16" label="cs" tooltip={$_('tooltips.registers.cs')} bcolor="green"/>
+        <Register bind:value={$registers.ds} isDifferent={differentRegisters.includes('ds')} zeropad=4 bits="16" label="ds" tooltip={$_('tooltips.registers.ds')} bcolor="green"/>
+        <Register bind:value={$registers.ss} isDifferent={differentRegisters.includes('ss')} zeropad=4 bits="16" label="ss" tooltip={$_('tooltips.registers.ss')} bcolor="green"/>
+        <Register bind:value={$registers.es} isDifferent={differentRegisters.includes('es')} zeropad=4 bits="16" label="es" tooltip={$_('tooltips.registers.es')} bcolor="green"/>
     </div>
     <div>
 <!--        commented out are flags not yet implemented-->

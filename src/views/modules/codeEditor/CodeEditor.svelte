@@ -67,6 +67,7 @@
         // larger font
         editor.setOptions({
             fontSize: 16,
+            fontFamily: "D2Coding",
             enableBasicAutocompletion: true,
             enableSnippets: false,
             enableLiveAutocompletion: true,
@@ -218,7 +219,7 @@
     const debouncedAnnotate = debounce(() => annotate(editor, $code), 0)
 
 
-    $: console.log("breakpoints", $breakpoints)
+    $: console.log("breakpoints", $breakpoints) 
     onDestroy(() => {
         unsubscribeCurrentlyExecutedLine()
         unsubscribeBreakpoints()
@@ -286,7 +287,8 @@
             on:blur={() => editorFocused = false}
             width='100%'
             height='85vh'
-            lang="assembly_x86"
+            lang="assembly_x86",
+
             bind:theme={theme}
             bind:value={$code}
     />
